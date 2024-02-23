@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=[device-width], initial-scale=1.0">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-responsive.css">
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rum+Raisin&display=swap" rel="stylesheet">
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/fontawesome.min.css" integrity="sha512-d0olNN35C6VLiulAobxYHZiXJmq+vl+BGIgAxQtD5+kqudro/xNMvv2yIHAciGHpExsIbKX3iLg+0B6d0k4+ZA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Restaurante</title>
+</head>
+
+<body>
+    
+    <header class="container">
+        <div class="menu-mobile">
+            <div class="logo">
+            
+            </div>
+            <div class="btn-menu-mobile">
+                <i class="fas fa-brs"></i>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a class="item-menu" href="#">Home</a></li>
+                <li><a class="item-menu" href="#cardapio">cardapio</a></li>
+                <div class="d-none" id="logo"></div>
+                <li><a class="item-menu" href="#galeria">Galeria</a></li>
+                <li><a class="item-menu" href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <div class="slider">
+
+            <div class="container banner">
+                <div class="flex-center-full left-banner">
+                    <!-- adicionar um display flex, e direction em column-->
+                    <div class="img-titulo-banner">
+                        <h1>
+                            <img src="assets/img/frase_banner.svg" alt="Experimente nossa feijoada">
+                        </h1>
+                    </div>
+                    <div class="text-center description-banner">
+                        <p>Atendimento de Segunda à Sábado das 11h às 15h</p>
+                        <p>Fazemos também Delivery ou Retirada</p>
+                        <a target="_blank" href="https://api.whatsapp.com/send?phone=551321057748&text=Ol%C3%A1,%20gostaria%20de%20fazer%20um%20pedido"><button>Faça seu pedido<i class="fab fa-whatsapp"></i></button></a>
+                    </div>
+                </div>
+                <div class="right-banner">
+                    <img src="assets/img/feijoada_banner.png" alt="Feijoada">
+                </div>
+            </div>
+
+            <div class="container banner virado">
+                <div class="flex-center-full left-banner">
+                    <!-- adicionar um display flex, e direction em column-->
+                    <div class="img-titulo-banner">
+                        <h1>
+                            <img src="assets/img/frase_banner.svg" alt="Experimente nossa feijoada">
+                        </h1>
+                    </div>
+                    <div class="text-center description-banner">
+                        <p>Atendimento de Segunda à Sábado das 11h às 15h</p>
+                        <p>Fazemos também Delivery ou Retirada</p>
+                        <a target="_blank" href="https://api.whatsapp.com/send?phone=551321057748&text=Ol%C3%A1,%20gostaria%20de%20fazer%20um%20pedido"><button>Faça seu pedido<i class="fab fa-whatsapp"></i></button></a>
+                    </div>
+                </div>
+                <div class="right-banner">
+                    <img src="assets/img/virado_a_paulista.png" alt="Virado à Paulista">
+                </div>
+            </div>
+
+        </div>
+
+        <div class="controls-slide text-center">
+            <i class="slide-1 fas fa-chevron-circle-left"></i>
+            <i class="slide-2 fas fa-chevron-circle-right"></i>        
+        </div>
+
+        <div class="box-arrow-down text-center">
+            <a href="#cardapio"><i class="fas fa-arrow-down"></i></a>
+        </div>
+
+        <section class="cardapio">
+
+            <div class="box-cardapio container">
+
+                <div class="days-week">
+
+                    <h2>Cardápio</h2>
+                    <div class="box-btn-cardapio">
+                        <a id="select-segunda">
+                            <div class="btn-cardapio">Segunda</div>
+                        </a>
+                        <a id="select-terca">
+                            <div class="btn-cardapio">Terça</div>
+                        </a>
+                        <a id="select-quarta">
+                            <div class="btn-cardapio">Quarta</div>
+                        </a>
+                        <a id="select-quinta">
+                            <div class="btn-cardapio">Quinta</div>
+                        </a>
+                        <a id="select-sexta">
+                            <div class="btn-cardapio">Sexta</div>
+                        </a>
+                        <a id="select-sabado">
+                            <div class="btn-cardapio">Sábado</div>
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="dishes-day">
+                    
+                    <div class="col-1">
+                        <h3 class="d-none">Pratos do dia</h3>
+                        <div id="box-dish-main">
+                            <div class="first">
+                                <h4>Virado à Paulista</h4>
+                                <div class="contents-box-dish">
+                                    <div class="contents-dish-left">
+                                        <p>Prato Feito<small>(Serve 1 Pessoa)</small></p>
+                                        <p>Fit<small>(Serve 1 Pessoa)</small></p>
+                                    </div>
+                                    <div class="price-dish-right">
+                                        <p>R$ 30</p>
+                                        <p>R$ 20</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                    
+                        <div class="box-dish">
+                        
+                            <div>
+                                <div class="dish">
+                                    <h4>Filé de Frango à parmegiana</h4>
+                                    <div class="contents-box-dish">
+                                        <div class="contents-dish-left">
+                                            <p>Prato Feito<small>(Serve 1 Pessoa)</small></p>
+                                            <p>Fit<small>(Serve 1 Pessoa)</small></p>
+                                        </div>
+                                        <div class="prices-dish-right">
+                                            <p>R$ 21</p>
+                                            <p>R$ 16</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                        </div>
+                        
+                            <div>
+                                <div class="dish">
+                                    <h4>Picadinho</h4>
+                                    <div class="contents-box-dish">
+                                        <div class="contents-dish-left">
+                                            <p>Prato Feito<small>(Serve 1 Pessoa)</small></p>
+                                            <p>Fit<small>(Serve 1 Pessoa)</small></p>
+                                        </div>
+                                        <div class="prices-dish-right">
+                                            <p>R$ 21</p>
+                                            <p>R$ 16</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+               
+                    
+                </div>
+
+            </div>
+   
+            <div id="right-col" class="col-1">
+                <div>
+                    <div class="dish">
+                        <h4>Sobremesas</h4>
+                            <div class="contents-box-dish">
+                                <div class="contents-dish-left">
+                                    <p>Pudim Cremoso</p>
+                                    <p>Taça da Felicidade</p>
+                                </div>
+                                <div class="prices-dish-right">
+                                    <p>R$ 8</p>
+                                    <p>R$ 12</p>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+            
+        </section>
+
+        <section id="galeria">
+            <div class="box-galeria container">
+                <div class="container-fotos">
+                    <h2>Galeria</h2>
+                    <div class="box-fotos">
+                        <img class="img-fluid small-img" src="./assets/photo/foto1-galeria.jpg" alt="">
+                        <img class="img-fluid small-img" src="./assets/photo/foto2-galeria.png" alt="">
+                        <img class="img-fluid small-img" src="./assets/photo/foto3-galeria.png" alt="">
+                        <img class="img-fluid small-img" src="./assets/photo/foto4-galeria.png" alt="">
+                        <img class="img-fluid small-img" src="./assets/photo/foto5-galeria.png" alt="">
+                        <img class="img-fluid small-img" src="./assets/photo/foto6-galeria.png" alt="">
+                        <img class="img-fluid small-img" src="./assets/photo/foto7-galeria.jpg" alt="">
+                        <img class="img-fluid small-img" src="./assets/photo/foto8-galeria.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div id="box-equipe" class="container">
+                <div class="container-equipe">
+                    <h2>Equipe</h2>
+                    <div class="box-fotos-equipe">
+                        <div class="perfil-funcionario flex-center-full text-center">
+                            <img class="img-fluid" src="./assets/photo/homem1.png" alt="foto1" >
+                            <h4>Luiz Carlos</h4>
+                            <p>Proprietário</p>
+                        </div>
+                        <div class="perfil-funcionario flex-center-full text-center">
+                            <img class="img-fluid" src="./assets/photo/mulher1.png" alt="foto1" >
+                            <h4>Janilce</h4>
+                            <p>Gerente</p>
+                        </div>
+                        <div class="perfil-funcionario flex-center-full text-center">
+                            <img class="img-fluid" src="./assets/photo/homem2.png" alt="foto1" >
+                            <h4>Luiz</h4>
+                            <p>Cozinheiro</p>
+                        </div>
+                        <div class="perfil-funcionario flex-center-full text-center">
+                            <img class="img-fluid" src="./assets/photo/mulher2.png" alt="foto1" >
+                            <h4>Jani</h4>
+                            <p>Cozinheira</p>
+                        </div>
+                        <div class="perfil-funcionario flex-center-full text-center">
+                            <img class="img-fluid" src="./assets/photo/homem1.png" alt="foto1" >
+                            <h4>Carlos</h4>
+                            <p>Auxiliar de Cozinha</p>
+                        </div>
+                        <div class="perfil-funcionario flex-center-full text-center">
+                            <img class="img-fluid" src="./assets/photo/mulher1.png" alt="foto1" >
+                            <h4>Nilce</h4>
+                            <p>Cozinheira</p>
+                        </div>
+                        <div class="perfil-funcionario flex-center-full text-center">
+                            <img class="img-fluid" src="./assets/photo/homem2.png" alt="foto1" >
+                            <h4>Ederson</h4>
+                            <p>Auxiliar de Cozinha</p>
+                        </div>
+                        <div class="perfil-funcionario flex-center-full text-center">
+                            <img class="img-fluid" src="./assets/photo/mulher2.png" alt="foto1" >
+                            <h4>Larissa</h4>
+                            <p>Atendente de Caixa</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        
+        <div id="contato" class="container">
+            <h2>Contato</h2>
+            <div id="localization" class="box-info-contato">
+                <i class="fas fa-map-marker-alt"></i>
+                <div class="address">
+                    <p>Av. Conselheiro Nébias, 111</p>
+                    <p>Santos - SP | CEP: 11075-320</p>
+                </div>
+            </div>
+            
+            <div id="phone" class="box-info-contato">
+                <i class="fas fa-phone-alt"></i>
+                <p>(11) 2222-2222 | (11) 9999-1111</p>
+            </div>
+            
+            <div id="box-whats-delivery" class="box-info-contato text-align">
+                <div>
+                    <p>Delivery ou Retirada, ligue ou peça via Whatsapp</p>
+                    <a target="_blank" href="https://api.whatsapp.com/send?phone=551321057748&text=Ol%C3%A1,%20gostaria%20de%20fazer%20um%20pedido" id="whats"><h4>(11) 99999-9999</h4><i class="fab fa-whatsapp"></i></a>
+                </div>
+                <img class="d-none img-fluid" src="./assets/img/delivery.png" alt="ícone moto delivery">
+            </div>
+            
+            <div class="redes-sociais">
+                <!--aria-hidden="true" = faz com que programas leitores de tela não leiam esse elemento. Isso é útil para evitar o excesso de informações para pessoas com algum tipo de deficiência visual-->
+                <a target="_blank" href="https://pt-bt.facebook.com/restaurante/"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+                <a target="_blank" href="https://www.instagram.com/restaurante/"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+            </div>
+            
+            <div id="direitos" class="text-center">
+                <span>© Restaurante Rapa do Tacho</span>
+            </div>
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,534 @@
+* {
+    --wine: #a30404;
+    --yellow: #fed40e;
+    --gray: #e5e5e5;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 93.75%; /* 100% 16px | 93.75% 15px */
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    background: var(--wine) url(../assets/img/bg_icons.svg);
+    /*configura a imagem de fundo para ficar fixa*/
+    background-attachment: fixed;
+    /*tenta encaixar a imagem onde ela foi colocada, centralizada e sem repetição*/
+    background-size: cover;
+}
+
+/*
+em= relativo ao tamanha da fonte definida no elemento pai (ele sempre vai buscar um pai, caso não tenha seguirá o padrão do navegador)
+rem= sempre relativa a fonte definida no :root (caso não tenha root, seguirá o padrão de 16px do navegador)
+*/
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.container {
+    width: min(90vw, 800vw);
+    padding-top: 4rem;
+    margin: auto;
+}
+
+.img-fluid {
+    width: max(14vw, 100px);
+    /*permite redimensionar uma imagem dentro do elemento onde ela foi inserida, tem um funcionamento bastante parecido com a propriedade background-size, a diferença é que o background-size é utilizado quando é desejado inserir uma imagme ao fundo do elemento e object-fit não;*/
+    object-fit: cover;
+}
+
+.flex-center-full {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.row {
+    flex-direction: row;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* ====================== Links & Buttons ====================== */
+
+a {
+    text-decoration: none;
+}
+
+.box-arrow-down a {
+    color: var(--yellow);
+}
+
+header ul li a {
+    padding: 10px;
+    color: var(--wine);
+    transition: all 0.3s;
+}
+
+header ul li a.item-menu:hover {
+    background: var(--wine);
+    color: var(--yellow);
+}
+
+button {
+    background: var(--yellow);
+    cursor: pointer;
+    padding: 10px 35px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 30px;
+    box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.87);
+    color: var(--wine);
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-family: "Rum Raisin", sans-serif;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: var(--gray);
+    color: var(--wine);
+    padding: 10px 50px;
+}
+
+.btn-cardapio {
+    border: 3px solid var(--yellow);
+    border-radius: 46px;
+    filter: drop-shadow(1px 1px 5px rgba(0, 0, 0, 0.87));
+    padding: 8px;
+    margin-top: 40px;
+    width: 160px;
+    max-width: 160px;
+    text-align: center;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: all 0.3s;
+}
+
+.btn-cardapio:hover {
+    color: var(--wine);
+    background: var(--yellow);
+    transform: scale(1.05);
+}
+
+
+/* ====================== Header ====================== */
+
+header {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+header ul {
+    background: var(--yellow);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 2rem;
+    padding: 12px 30px;
+    height: 55px;
+    min-width: 800px;
+}
+
+header ul li {
+    list-style: none;
+    font-family: "Rum Raisin", sans-serif;
+    font-size: 2.2rem;
+    text-transform: uppercase;
+}
+
+
+/* ====================== Titles ====================== */
+
+h2,
+h4 {
+    font-family: "Rum Raisin", sans-serif;
+    font-weight: normal;
+    color: var(--wine);
+}
+
+h2 {
+    color: var(--yellow);
+    font-size: 3.5rem;
+    text-transform: uppercase;
+}
+
+.dishes-day .col-1 h3:first-child {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+.dishes-day .col-1 #box-dish-main h4 {
+    color: var(--yellow);
+}
+
+.dishes-day h4 {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    color: var(--wine);
+}
+
+#galeria h2 {
+    color: var(--wine);
+    margin-bottom: 10px;
+}
+
+.perfil-funcionario h4 {
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-top: 20px;
+}
+
+.perfil-funcionario p {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #363636;
+}
+
+#box-whats-delivery h4 {
+    font-size: 4.2rem;
+}
+
+/* ====================== Banner ====================== */
+
+.slider {
+    display: flex;
+    transition: all ease .4s;
+}
+
+.controls-slide {
+    margin: auto;
+    display: flex;
+    width: 40vw;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: -2rem;
+}
+
+.controls-slide i {
+    font-size: 2rem;
+    color: var(--yellow);
+    opacity: .6;
+    cursor: pointer;
+    text-shadow: 1px 1px 20px #000;
+    transition: all ease .2s;
+}
+
+.banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100vw;
+    height: 75vh;
+}
+
+.d-none img {
+    min-width: 400px;
+}
+
+.description-banner {
+    position: relative;
+    top: -30px;
+    max-width: 380px;
+}
+
+.left-banner p {
+    line-height: 44px;
+    letter-spacing: 0.8px;
+    color: var(--gray);
+    font-family: "Rum Raisin", sans-serif;
+}
+
+/*first-child = seleciona o primeiro filho dentro do elemento pai
+nth-child = permite especificar qual o elemento filho deseja ser selecionado*/
+.description-banner p:first-child {
+    font-family: "Rum Raisin", sans-serif;
+    font-size: 1.9rem;
+}
+
+.description-banner p {
+    font-size: 1.6em;
+}
+
+.description-banner i {
+    margin-left: 10px;
+    font-size: 2rem;
+}
+
+.right-banner img {
+    max-width: 500px;
+    transition: all 0.3s;
+}
+
+.right-banner img:hover {
+    /*scale() = aumento o tamanho do elemento como se estivesse dando um zoom*/
+    transform: scale(1.02);
+}
+
+.virado {
+    display: none;
+}
+
+.box-arrow-down {
+    margin-top: 2rem;
+    font-size: 3rem;
+}
+
+.box-arrow-down i {
+    text-shadow: 1px 1px 20px #000;
+    opacity: 0.7;
+    transition: all 0.2s;
+}
+
+.box-arrow-down i:hover, .controls-slide i:hover, .btn-cardapio:hover, .active {
+    opacity: 1;
+}
+
+.box-arrow-down {
+    padding: 0 0 4.5rem;
+}
+
+/* ================ Section Cardápio ============= */
+
+.cardapio {
+    background: #e5e5e5 url(../assets/img/bg_icons.svg);
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.box-cardapio {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    padding: 4rem 0;
+}
+
+.days-week {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    background: var(--wine) url(../assets/img/bg_icons.svg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.box-btn-cardapio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box-btn-cardapio a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--yellow);
+}
+
+.box-btn-cardapio a:first-child {
+    margin-top: 5px;
+}
+
+.dishes-day {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 50px;
+    padding: 140px 60px 50px 20px;
+    background: rgba(229, 229, 229, 0.7);
+}
+
+.dishes-day .col-1 {
+    display: flex;
+    flex-direction: column;
+}
+
+#box-dish-main div:first-child{
+    background: var(--wine);
+    padding: 10px 15px;
+    border-radius: 15px;
+    margin-top: 20px;
+}
+
+.contents-box-dish {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contents-box-dish p {
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-top: 6px;
+}
+
+.contents-box-dish p small {
+    margin-left: 2px;
+    font-size: 0.8rem;
+}
+
+.dish {
+    padding: 10px 15px;
+    margin-top: 20px;
+}
+
+.dish p {
+    color: #000;
+}
+
+/* ==================== Section Galeria ===================== */
+
+.box-galeria,
+#box-equipe {
+    display: flex;
+    justify-content: center;
+    background: #e5e5e5 url(../assets/img/bg_icons.svg);
+    background-size: cover;
+    background-attachment: fixed;
+    padding-bottom: 100px;
+}
+
+.container-fotos,
+.container-equipe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box-fotos,
+.box-fotos-equipe {
+    display: grid;
+    /*repeat() = define quantas colunas irão existir no grid e o tamanho de cada coluna*/
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 45px;
+    margin-top: 20px;
+}
+
+.box-galeria img,
+#box-equipe img {
+    height: auto;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.box-galeria img:hover,
+#box-equipe img:hover {
+    transform: scale(1.05);
+    filter: grayscale(100%);
+}
+
+/* ====================== Footer ====================== */
+
+footer {
+    background: #353535 url(../assets/img/bg_icons.svg);
+    background-size: cover;
+    background-attachment: fixed;
+    padding-bottom: 4rem;
+}
+
+#contato {
+    display: flex;
+    flex-direction: column;
+}
+
+.box-info-contato {
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    width: max(20vw, 480px);
+    padding: 15px;
+    margin-top: 25px;
+}
+
+.box-info-contato p {
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+#phone.box-info-contato p {
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.box-info-contato i {
+    font-size: 2.2rem;
+    color: var(--wine);
+}
+
+#box-whats-delivery {
+    background: #fff;
+    padding: 10px 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+#box-whats-delivery p {
+    color: var(--wine);
+    font-size: 1.1rem;
+}
+
+#box-whats-delivery img {
+    width: max(7vw, 110px);
+    position: absolute;
+    left: min(42vw, 550px);
+    transition: all 0.3s;
+}
+
+#box-whats-delivery img:hover {
+    /*!important = define prioridade máxima para uma propriedade, quando aplicado, garante que nenhuma outra regra sobreponha a regra onde foi utilizado.*/
+    left: min(45vw, 600px) !important;
+}
+
+#whats {
+    display: flex;
+    align-items: center;
+    transition: all 0.3s;
+}
+
+#whats:hover {
+    transform: scale(1.05);
+}
+
+#whats i {
+    font-size: 3.6rem;
+    color: #34af23;
+    margin-left: 7px;
+}
+
+.redes-sociais {
+    text-align: right;
+    font-size: 3rem;
+    margin-top: 15px;
+}
+
+.redes-sociais i {
+    color: #fff;
+    margin-left: 15px;
+}
+
+.redes-sociais a:hover {
+    text-shadow: 1px 1px 8px #000;
+}
+
+#direitos {
+    margin-top: 1rem;
+    color: #fff;
+    font-size: .9rem;
+}
+
